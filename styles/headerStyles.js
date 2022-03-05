@@ -21,7 +21,4 @@ export const HeadStyle = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center"
     },
-    swicth:{
-        
-    }
 })

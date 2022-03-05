@@ -32,11 +32,28 @@ export const styles = StyleSheet.create({
         justifyContent:"center",
         elevation: 0,
     },
+    customBtn2:{
+        backgroundColor: "#89A2FA",
+        width: 400,
+        height: 50,
+        borderRadius: 10,
+        alignItems: "center",
+        justifyContent:"center",
+        elevation: 6,
+    },
+    customBtnOnPress2:{
+        backgroundColor: "#89A2FA",
+        width: 400,
+        height: 50,
+        borderRadius: 10,
+        alignItems: "center",
+        justifyContent:"center",
+        elevation: 0,
+    },    
     btnText:{
         color: "#ffffff",
         fontFamily: "MonsBold",
         flexWrap: "wrap"
     },
-    
 });
   

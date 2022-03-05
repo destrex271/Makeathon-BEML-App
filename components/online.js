@@ -21,7 +21,11 @@ export default function Online(){
     };
 
     const syncData = () => {
-        console.log("Chal gaya")
+        console.log("Syncing Data")
+    }
+
+    const toCloud = () => {
+        console.log("Sending data")
     }
 
     return( 
@@ -44,14 +48,15 @@ export default function Online(){
             {/* Online Body */}
             <View style={onlineBodyStyles.body}>
                 <TextInput
-                    style={onlineBodyStyles.input}
-                    // onChangeText={onChangeNumber}
-                    
-                    placeholder="useless placeholder"
+                    style={!dark?onlineBodyStyles.input:onlineBodyStyles.inputDarkMode}
+                    placeholder="127.0.0.1:3000/home"
                 />
                 <View style={onlineBodyStyles.btnRow}>
-                    <JumpBtn text="Sync" fn= {syncData} />
+                    <JumpBtn text="Sync" fn= {syncData} full={false} />
                 </View>
+            </View>
+            <View style={onlineBodyStyles.body2}>
+                <JumpBtn text="To Cloud" fn= {toCloud} full={true}/>
             </View>
             {/* ----------- */}
         </View>

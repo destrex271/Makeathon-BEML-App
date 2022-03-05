@@ -14,7 +14,7 @@ export default function JumpBtn (props){
     
     return(
         <View>
-            <Pressable style={!pressed ? styles.customBtn : styles.customBtnOnPress} onPress={() => {onPress();props.fn();}} onPressOut={outPress}>
+            <Pressable style={[!props.full?(!pressed ? styles.customBtn : styles.customBtnOnPress):(!pressed ? styles.customBtn2 : styles.customBtnOnPress2)]} onPress={() => {onPress();props.fn();}} onPressOut={outPress}>
                 <Text style={styles.btnText}>{props.text}</Text>
             </Pressable>
         </View>
