@@ -24,7 +24,7 @@ export const onlineBodyStyles = StyleSheet.create({
         paddingHorizontal: '5%',
         fontFamily: 'MonsReg',
         fontSize: 20,
-        color: "#000000"
+        color: "#000000",
     },
     inputDarkMode: {
         height: '7%',

@@ -48,6 +48,7 @@ export default function Online(){
             {/* Online Body */}
             <View style={onlineBodyStyles.body}>
                 <TextInput
+                    placeholderTextColor={!dark?"#00000066":"#ffffffaa"}
                     style={!dark?onlineBodyStyles.input:onlineBodyStyles.inputDarkMode}
                     placeholder="127.0.0.1:3000/home"
                 />
