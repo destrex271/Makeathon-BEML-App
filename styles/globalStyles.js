@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
       backgroundColor: '#fff',
       paddingTop:40,
       justifyContent: 'flex-start',
-      flexDirection: "row"
+      flexDirection: "column"
     },
     customBtn:{
         backgroundColor: "#89A2FA",
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
         height: 50,
         borderRadius: 10,
         alignItems: "center",
-        paddingTop: 12,
+        justifyContent:"center",
         elevation: 6,
     },
     customBtnOnPress:{
@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
         height: 50,
         borderRadius: 10,
         alignItems: "center",
-        paddingTop: 12,
+        justifyContent:"center",
         elevation: 0,
     },
     btnText:{

@@ -3,8 +3,8 @@ import {Dimensions} from 'react-native';
 
 export const HeadStyle = StyleSheet.create({
     headContainer: {
-        flex: 1,
-        height: '7%',
+        flex: 0.05,
+        flexWrap: "nowrap",
         justifyContent: "flex-end",
         paddingHorizontal: '3%',
         paddingTop: '4%',
@@ -21,4 +21,7 @@ export const HeadStyle = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center"
     },
+    swicth:{
+        
+    }
 })
