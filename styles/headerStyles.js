@@ -6,11 +6,19 @@ export const HeadStyle = StyleSheet.create({
         flex: 1,
         height: '7%',
         justifyContent: "flex-end",
-        paddingHorizontal: 10,
-        
+        paddingHorizontal: '3%',
+        paddingTop: '4%',
+        flexDirection: "row"
     },
     textStyle: {
         fontFamily: "MonsReg",
         color: "#89A2FA"
-    }
+    },
+    wifiBtn: {
+        width: 40,
+        height: 40,
+        borderRadius: 40,
+        alignItems: "center",
+        justifyContent: "center"
+    },
 })
