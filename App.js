@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { NetworkProvider } from "react-native-offline";
 import Base from './components/base';
 
+
 export default function App() {
   
   
