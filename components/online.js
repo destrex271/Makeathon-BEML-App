@@ -25,10 +25,22 @@ export default function Online(){
     };
 
     const sendDataToCloud = (fname) => {
-        const apiUrl = ""
+        const apiUrl =  "http://192.168.113.196:5000/api/sendParameters" //"https://makeathon-beml.herokuapp.com/api/sendParameters"
         FileSystem.readAsStringAsync(fileTop + fname)
         .then((res) => {
-            
+            const resJson = JSON.parse(res.toString('utf-8'))
+            // console.log(resJson)
+            // console.log()
+            const payload = encodeURIComponent("uid") + "=" + encodeURIComponent(`${resJson.uid}`) + "&" + encodeURIComponent("cypher") + "=" + encodeURIComponent(`${resJson.cypher[0]['cypherData']}`) + "&" + encodeURIComponent("time") + "=" + encodeURIComponent("hello")
+            console.log(payload)
+            fetch(apiUrl,{
+                method: "POST",
+                mode:"cors",
+                headers:{
+                    "Content-Type" : 'application/x-www-form-urlencoded'
+                },
+                body: payload
+            }).then((res)=>console.log("Hello")).catch((err)=>console.log("tre"))
             ToastAndroid.show("Data Uploaded Succesfully!", ToastAndroid.LONG)
         }).catch((err)=>console.log("ghjkhgfdfghjkl"))
     }
