@@ -32,7 +32,7 @@ export default function Online(){
             // console.log(resJson)
             // console.log()
             const payload = encodeURIComponent("uid") + "=" + encodeURIComponent(`${resJson.uid}`) + "&" + encodeURIComponent("cypher") + "=" + encodeURIComponent(`${resJson.cypher[0]['cypherData']}`) + "&" + encodeURIComponent("time") + "=" + encodeURIComponent("hello")
-            console.log(payload)
+            // console.log(payload)
             fetch(apiUrl,{
                 method: "POST",
                 mode:"cors",
@@ -61,11 +61,13 @@ export default function Online(){
         ToastAndroid.show("Data Recieved!", ToastAndroid.LONG);
         const fname = "ak.txt"
         const fileURL = write(res,fname)
-        sendDataToCloud(fname)
+        // sendDataToCloud(fname)
     }
 
     const toCloud = () => {
         console.log("Sending data")
+        const fname = "ak.txt"
+        sendDataToCloud(fname)
     }
 
     return( 
