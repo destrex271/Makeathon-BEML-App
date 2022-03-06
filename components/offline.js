@@ -10,6 +10,10 @@ import { HeadStyle } from '../styles/headerStyles';
 import { Ionicons } from '@expo/vector-icons';
 import { NetworkConsumer, NetworkProvider } from "react-native-offline";
 import { onlineBodyStyles } from "../styles/onlineBody";
+import * as FileSystem from 'expo-file-system';
+import { write } from "./services/write";
+
+const fileTop = FileSystem.documentDirectory
 
 export default function Online(){
     const [conEst, setConest] = useState(false)

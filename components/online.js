@@ -13,9 +13,8 @@ import { onlineBodyStyles } from "../styles/onlineBody";
 import { write } from "./services/write";
 import * as FileSystem from 'expo-file-system';
 
-var fileURL = ""
-
 export default function Online(){
+    const fileTop = FileSystem.documentDirectory
     const [conEst, setConest] = useState(false)
     const [dark, setDark] = useState(false);
     const [ip, setIp] = useState("");
@@ -25,13 +24,13 @@ export default function Online(){
         setDark(!dark)
     };
 
-    const sendDataToCloud = () => {
-        console.log(fileURL)
-        FileSystem.readAsStringAsync(fileURL)
+    const sendDataToCloud = (fname) => {
+        const apiUrl = ""
+        FileSystem.readAsStringAsync(fileTop + fname)
         .then((res) => {
-            console.log(res)
-            ToastAndroid.show(fileURL,ToastAndroid.LONG)
-        })
+            
+            ToastAndroid.show("Data Uploaded Succesfully!", ToastAndroid.LONG)
+        }).catch((err)=>console.log("ghjkhgfdfghjkl"))
     }
 
     // async
@@ -49,8 +48,8 @@ export default function Online(){
         // console.log(res)
         ToastAndroid.show("Data Recieved!", ToastAndroid.LONG);
         const fname = "ak.txt"
-        fileURL = write(res,fname)
-        sendDataToCloud()
+        const fileURL = write(res,fname)
+        sendDataToCloud(fname)
     }
 
     const toCloud = () => {
