@@ -25,7 +25,7 @@ export default function Online(){
     };
 
     const sendDataToCloud = (fname) => {
-        const apiUrl =  "http://192.168.113.196:5000/api/sendParameters" //"https://makeathon-beml.herokuapp.com/api/sendParameters"
+        const apiUrl =  "https://makeathon-beml.herokuapp.com/api/sendParameters"
         FileSystem.readAsStringAsync(fileTop + fname)
         .then((res) => {
             const resJson = JSON.parse(res.toString('utf-8'))
