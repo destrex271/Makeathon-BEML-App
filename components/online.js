@@ -31,7 +31,7 @@ export default function Online(){
             const resJson = JSON.parse(res.toString('utf-8'))
             // console.log(resJson)
             // console.log()
-            const payload = encodeURIComponent("uid") + "=" + encodeURIComponent(`${resJson.uid}`) + "&" + encodeURIComponent("cypher") + "=" + encodeURIComponent(`${resJson.cypher[0]['cypherData']}`) + "&" + encodeURIComponent("time") + "=" + encodeURIComponent("hello")
+            const payload = encodeURIComponent("uid") + "=" + encodeURIComponent(`${resJson.uid}`) + "&" + encodeURIComponent("cypher") + "=" + encodeURIComponent(`${resJson.cypher[0]['cypherData']}`) + "&" + encodeURIComponent("time") + "=" + encodeURIComponent(`${resJson.cypher[0]['time']}`)
             // console.log(payload)
             fetch(apiUrl,{
                 method: "POST",
